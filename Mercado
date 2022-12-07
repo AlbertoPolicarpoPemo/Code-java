@@ -1,0 +1,175 @@
+public class Clientes {
+    private String nome;
+    private String apelido;
+    private String morada;
+    private int nIdentificao;
+    private int telefone;
+
+    public Clientes(String nome, String apelido, String morada, int nIdentificao, int telefone) {
+        this.nome=nome;
+        this.apelido=apelido;
+        this.morada=morada;
+        this.nIdentificao=nIdentificao;
+        this.telefone=telefone;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getApelido() {
+        return apelido;
+    }
+
+    public void setApelido(String apelido) {
+        this.apelido = apelido;
+    }
+
+    public String getMorada() {
+        return morada;
+    }
+
+    public void setMorada(String morada) {
+        this.morada = morada;
+    }
+
+    public int getnIdentificao() {
+        return nIdentificao;
+    }
+
+    public void setnIdentificao(int nIdentificao) {
+        this.nIdentificao = nIdentificao;
+    }
+
+    public int getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(int telefone) {
+        this.telefone = telefone;
+    }
+    public double codigoDoCliente(double codigoDoCliente){
+        return codigoDoCliente+ 2334444;
+
+    }
+    public double numeroDeCompraRealizada(){
+        return 0.1 * 100;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Clientes{" +
+                "nome='" + nome + '\'' +
+                ", apelido='" + apelido + '\'' +
+                ", morada='" + morada + '\'' +
+                ", nIdentificao=" + nIdentificao +
+                ", telefone=" + telefone +
+                '}';
+    }
+}
+public class Funcionarios extends Clientes{
+     double numSegurancaSocial;
+     double salario;
+     String turno;
+
+    public Funcionarios(String nome, String apelido, String morada, int nIdentificao, int telefone,
+    double numSegurancaSocial, double salario, String turno) {
+        super(nome, apelido, morada, nIdentificao, telefone);
+        this.numSegurancaSocial=numSegurancaSocial;
+        this.salario=salario;
+        this.turno=turno;
+    }
+    String salarioTurno(double salario){
+        return salario+ " 150"+ turno+" noturno";
+    }
+
+    public double getNumSegurancaSocial() {
+        return numSegurancaSocial;
+    }
+
+    public void setNumSegurancaSocial(double numSegurancaSocial)
+    {
+        this.numSegurancaSocial = numSegurancaSocial;
+    }
+
+    public double getSalario()
+    {
+        return salario;
+    }
+
+    public void setSalario(double salario)
+    {
+        this.salario = salario;
+    }
+
+    public String getTurno() {
+        return turno;
+    }
+
+    public void setTurno(String turno)
+    {
+        this.turno = turno;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionarios{" +
+                "numSegurancaSocial=" + numSegurancaSocial +
+                ", salario=" + salario +
+                ", turno='" + turno + '\'' +
+                '}';
+    }
+}
+public class Repositores extends Clientes{
+    public Repositores(String nome, String apelido, String morada, int nIdentificao, int telefone) {
+        super(nome, apelido, morada, nIdentificao, telefone);
+    }
+
+    @Override
+    public String toString() {
+        return "Repositores{}";
+    }
+}
+
+import java.util.ArrayList;
+
+public class Mercado {
+    public static ArrayList<String> funcionarios=new ArrayList<>();
+}
+public class Subcontratados extends Clientes{
+    String talho;
+    String frutaria;
+    int caixa;
+
+    public Subcontratados(String nome, String apelido, String morada, int nIdentificao, int telefone,
+                          String talho, String frutaria, int caixa) {
+        super(nome, apelido, morada, nIdentificao, telefone);
+        this.talho=talho;
+        this.frutaria=frutaria;
+        this.caixa=caixa;
+    }
+}
+
+
+
+public class Main {
+    public static void main(String args[]) {
+
+        Clientes client1 = new Clientes("\nJoão", " \nMusa", "\nLISBOA", 2345555, 92309877);
+
+        Funcionarios funcionarios = new Funcionarios("\nMatondo", "\nTempo", "\nSetubal", 3488746, 94876665, 3567777, 2500, "Noturno");
+
+        Repositores repositores = new Repositores(" \nPaca", " \nDanda", "\nPorto", 4664774, 92466777);
+        Subcontratados subcontratados = new Subcontratados("\nPinto", "\nJoel", "\n Coimbra", 263556, 918766653, "Repolho", "Maça", 344);
+
+        Mercado.funcionarios.add("\nMatondo");
+
+        System.out.println( funcionarios.getNome()+funcionarios.getApelido()+ funcionarios.getMorada());
+    }
+}
+ 
