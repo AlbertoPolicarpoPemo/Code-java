@@ -1,3 +1,28 @@
+O objetivo dessa atividade prática é implementar as classes básicas para utilizar
+num supermercado. Precisaremos armazenar informação de Clientes, Funcionários,
+Repositores e Subcontratados. Precisamos saber o nome, apelido, número de
+identificação, morada e telefone de todos. 
+Além disso, necessitamos da seguinte informação específica de cada classe:
+● Dos clientes, também nos interessa o seu código de cliente e o número de
+compras realizadas, esta última informação é necessária para obter o desconto
+que se deve aplicar ao cliente (por cada 100 compras aplica-se 1% de desconto),
+devemos por isso implementar um método compra que anote que foi feita uma
+compra.
+● Dos funcionários e repositores, devemos saber o seu número da segurança social,
+o seu salário e o turno ao que pertencem (manhã, tarde ou noite). Para obter o
+salário, deverá ter-se em conta que se trabalhar no turno da noite, tem um extra
+de 150 euros.
+● Dos subcontratados, iremos armazenar as mesmas informações dos
+funcionários, além da sua especialidade (talho, frutaria, caixa, etc.).
+Todos os atributos irão definir-se privados e deverão dispor de métodos de leitura e
+escrita. Deverá incluir um método toString que substitua o método toString
+de Object e que permita imprimir toda a informação de cada classe. 
+Deverás criar uma classe Mercado que tenha um método
+funcionáriosMercado que quando lhe passar uma lista de funcionários do
+mercado, imprime todas as suas características por ecrã.
+Implementa classes abstratas para generalizar características comuns entre
+distintas subclasses
+
 public class Clientes {
     private String nome;
     private String apelido;
