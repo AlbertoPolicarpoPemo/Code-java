@@ -1,3 +1,5 @@
+O trabalho Prático consiste em monstrar como funciona o conceito de herança concomitamente com os métodos; public, set, get, String toString.
+
 O objetivo dessa atividade prática é implementar as classes básicas para utilizar
 num supermercado. Precisaremos armazenar informação de Clientes, Funcionários,
 Repositores e Subcontratados. Precisamos saber o nome, apelido, número de
